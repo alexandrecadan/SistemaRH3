@@ -15,12 +15,12 @@ public class Pessoa {
     private String endereco;
     
 
-    public Pessoa(String nome, String cpf, Date dataNascimento, String endereco) {
+    public Pessoa(String nome, String cpf, Date dataNascimento, String endereco, Date dataAdmissao) {
         this.nome = nome;
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;
-        this.dataAdmissao = dataNascimento;
         this.endereco = endereco;
+        this.dataAdmissao = dataAdmissao;
     }
 
     public String getNome() {

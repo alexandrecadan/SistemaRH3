@@ -13,18 +13,18 @@ import java.util.Date;
  */
 public class Funcionario extends Pessoa {
     private String cargo;
-    private Date dataAdminissao;
     private double salario;
     private String empresa;
 
 //adicionando construtor com o Super, Funcionário vai ter todos os atributos de Pessoa e Funcionario juntos
-    public Funcionario(String cargo, Date dataAdminissao, double salario, String empresa, String nome, String cpf, Date dataNascimento, String endereco) {
-        super(nome, cpf, dataNascimento, endereco);
+
+    public Funcionario(String cargo, double salario, String empresa, String nome, String cpf, Date dataNascimento, String endereco, Date dataAdmissao) {
+        super(nome, cpf, dataNascimento, endereco, dataAdmissao);
         this.cargo = cargo;
-        this.dataAdminissao = dataAdminissao;
         this.salario = salario;
         this.empresa = empresa;
     }
+
 
     public String getCargo() {
         return cargo;
@@ -32,14 +32,6 @@ public class Funcionario extends Pessoa {
 
     public void setCargo(String cargo) {
         this.cargo = cargo;
-    }
-
-    public Date getDataAdminissao() {
-        return dataAdminissao;
-    }
-
-    public void setDataAdminissao(Date dataAdminissao) {
-        this.dataAdminissao = dataAdminissao;
     }
 
     public double getSalario() {
@@ -57,5 +49,9 @@ public class Funcionario extends Pessoa {
     public void setEmpresa(String empresa) {
         this.empresa = empresa;
     }  
+    
+    public double getBonus(){
+        return this.getSalario()*2;
+    }
     
 }
